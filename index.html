@@ -16,8 +16,6 @@
 
 </head>
 
-
-
 <body>
     <header class="cabeçalho">
         <div class="container">
@@ -76,14 +74,17 @@
             <li class="opcoes__item"><a href="#" class="opcao__link"></a>Minha estante</li>
         </ul>
 
-
-
-
         <div class="container">
             <a href="#"> <img src="img/Favoritos.svg" alt="meus favoritos"
                     class="container__imagem container__imagem-transparente"></a>
-            <a href="#"> <img src="img/Compras.svg" alt="minhas compras" class="container__imagem"></a>
-            <a href="#"> <img src="img/Usuario.svg" alt="usuario" class="container__imagem"></a></a>
+            <a href="#" class="container__link">
+                <img src="img/Compras.svg" alt="minhas compras" class="container__imagem">
+                <p class="container__texto">Minha sacola</p>
+            </a>
+            <a href="#" class="container__link">
+                <img src="img/Usuario.svg" alt="usuario" class="container__imagem">
+                <p class="container__texto">Meu perfil</p>
+            </a>
         </div>
     </header>
 
@@ -92,56 +93,45 @@
         <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
         <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
     </section>
+
     <section class="carrossel">
         <h2 class="carrossel__titulo">Últimos lançamentos</h2>
-        <!-- Slider main container -->
-        <div class="swiper">
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide"><img src="img/ApacheKafka.svg" alt="Livro sobre apache kafka"></div>
-                <div class="swiper-slide"><img src="img/Javascript.svg" alt="livro sobre javascript"></div>
-                <div class="swiper-slide"><img src="img/Liderança.svg" alt="livro sobre liderança"></div>
-                <div class="swiper-slide"><img src="img/Guia Front-end.svg" alt="guia sobre desenvolvimento front-end">
+        <div class="carrossel__container">
+            <div class="swiper">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/ApacheKafka.svg" alt="Livro sobre apache kafka"></div>
+                    <div class="swiper-slide"><img src="img/Javascript.svg" alt="livro sobre javascript"></div>
+                    <div class="swiper-slide"><img src="img/Liderança.svg" alt="livro sobre liderança"></div>
+                    <div class="swiper-slide"><img src="img/Guia Front-end.svg"
+                            alt="guia sobre desenvolvimento front-end"></div>
+                    <div class="swiper-slide"><img src="img/Portugol.svg" alt="livro sobre a linguagem portugol"></div>
+                    <div class="swiper-slide"><img src="img/Acessibilidade.svg" alt="livro sobre acessibilidade"></div>
                 </div>
-                <div class="swiper-slide"><img src="img/Portugol.svg" alt="livro sobre a linguagem portugol"></div>
-                <div class="swiper-slide"><img src="img/Acessibilidade.svg" alt="livro sobre acessibilidade"></div>
-
-
-                <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-
-
             </div>
 
             <div class="card">
-                <!-- 1° linha-->
                 <div class="card__descricao">
-                    <!--1° coluna-->
                     <div class="descricao">
                         <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
                         <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
                         <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
                     </div>
-                    <!--2° coluna-->
                     <img src="img/Angular.svg" class="descricao__imagem" alt="logo do framework angular">
                 </div>
-                <!--2° linha-->
                 <div class="card__botões">
-                    <!--1° coluna-->
                     <ul class="botões">
                         <li class="botões__item"><img src="img/Favoritos.svg" alt="favoritar livro"></li>
                         <li class="botões__item"><img src="img/Compras.svg" alt="adicionar no carrinho de compras"></li>
                     </ul>
-                    <!--2° coluna-->
                     <a href="#" class="botões__ancora">Saiba mais</a>
                 </div>
             </div>
-
+        </div>
     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>const swiper = new Swiper('.swiper', {
             spaceBetween: 10,
@@ -203,7 +193,7 @@
                 <a href="#" class="botões__ancora">Saiba mais</a>
             </div>
         </div>
-
+        </div>
     </section>
 
     <section class="topicos">
@@ -265,7 +255,7 @@
     <footer class="rodape">
         <h2 class="rodape__alura">Grupo Alura</h2>
         <ul class="lista__rodape">
-            
+
             <li class="lista-rodape__titulo">Educação</li>
 
             <li class="lista-rodape__item"><img src="img/CasaDoCodigo.svg" alt="Logo casa do código">
@@ -279,7 +269,7 @@
         </ul>
 
         <ul class="lista__rodape">
-            
+
             <li class="lista-rodape__titulo">Educação on-line</li>
 
             <li class="lista-rodape__item"><img src="img/Alura.svg" alt="Logo casa da Alura">
