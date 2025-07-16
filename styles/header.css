@@ -1,15 +1,27 @@
-.cabeçalho__menu-humburguer{
+.cabeçalho__menu-humburguer {
     width: 24px;
     height: 24px;
     background-image: url("../img/Menu.svg");
     display: inline-block;
     background-position: center;
     background-repeat: no-repeat;
-    background-position: center;
-    
+
 }
 
-.cabeçalho{
+.container__botao:checked~.container__rotulo>.cabeçalho__menu-humburguer {
+
+    background-image: url("../img/Menu\ Aberto2\ \(1\).svg");
+
+}
+
+.container__botao:checked~.container__rotulo {
+
+    background: var(--azul-degrade);
+}
+
+
+
+.cabeçalho {
     background-color: var(--branco-de-fundo);
     display: flex;
     justify-content: space-between;
@@ -17,152 +29,181 @@
     position: relative;
 }
 
-.container{
+.container {
     display: flex;
     align-items: center;
 }
 
-.container__imagem{
+.container__imagem {
     padding: 1em;
 }
 
-.lista-menu{
+.lista-menu {
     display: none;
     position: absolute;
-    top:100%;
+    top: 100%;
     width: 60vw;
 }
 
-.container__botao:checked ~ .lista-menu{
+.container__botao:checked~.lista-menu {
     display: block;
-    
+
 }
 
-.lista-menu__titulo, 
-.lista-menu__item{
+.lista-menu__titulo,
+.lista-menu__item {
 
     font-size: 16px;
     padding: 1em;
     background-color: var(--branco-de-fundo);
-    
+
 }
 
 
 .lista-menu__link,
 .lista-menu__link:visited {
-  
-  text-decoration: none;
+
+    text-decoration: none;
 }
 
-.lista-menu__titulo{
+.lista-menu__titulo {
     color: var(--amarelo-titulo);
     font-weight: 700;
 }
 
-.lista-menu__link{
-    background:var(--azul-degrade);
-    -webkit-background-clip:text;
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-transform: uppercase;
 }
 
-.container__botao{
+.container__botao {
     display: none;
 }
 
-.opcoes{
+.opcoes {
     display: none;
 }
 
-.opcoes__botao{
+.opcoes__botao {
     display: none;
 }
 
-.container__titulo{
+.container__titulo {
     display: none;
 }
 
-.container__texto{
+.container__texto {
     display: none;
 }
 
 @media screen and (min-width: 1024px) {
-    .container__titulo, .container__titulo--negrito{
+
+    .opcoes__botao:checked~.opcoes__rotulo>.opcoes__item {
+        background: var(--azul-degrade);
+        color: var(--branco-de-fundo);
+    }
+
+    .opcoes__botao:checked~.lista-menu>.lista-menu__link {
+        background: var(--azul-degrade);
+        color: var(--branco-de-fundo);
+    }
+
+    .opcoes__item {
+        padding: 1em 2em;
+    }
+
+
+
+
+    .lista-menu__item:hover {
+        background: var(--azul-degrade);
+
+    }
+
+    .lista-menu__item:hover>.lista-menu__link {
+        -webkit-text-fill-color: var(--branco-botao);
+    }
+
+
+    .container__titulo,
+    .container__titulo--negrito {
 
         font-family: var(--fonte-secundario);
         font-size: 30px;
 
     }
 
-    .container__titulo{
+    .container__titulo {
 
         font-weight: 400;
         display: block;
     }
 
-    .container__titulo--negrito{
+    .container__titulo--negrito {
 
         font-weight: 700;
     }
 
-    .cabeçalho{
+    .cabeçalho {
         padding: 0em 3em;
     }
-    
-    .opcoes{
+
+    .opcoes {
         display: flex;
-        padding: 2em;
+
     }
 
-    .opcoes__item{
-        padding: 0 1em;
+    .opcoes__item {
+
         text-transform: uppercase;
     }
-    
-    .opcao__link{
+
+    .opcao__link {
         text-decoration: none;
         color: var(--preto);
     }
 
-    .container__imagem-transparente{
+    .container__imagem-transparente {
         display: none;
     }
 
-    .cabeçalho__menu-humburguer{
+    .cabeçalho__menu-humburguer {
         display: none;
     }
 
-    .opcoes__botao:checked ~ .lista-menu{
+    .opcoes__botao:checked~.lista-menu {
         display: block;
         width: auto;
     }
-    
+
 }
-     
-@media screen and (min-width: 1728px){
-    .container__link{
+
+@media screen and (min-width: 1728px) {
+    .container__link {
         display: flex;
         align-items: center;
         text-decoration: none;
-        color:var(--preto);
+        color: var(--preto);
     }
 
-    .cabeçalho{
+    .cabeçalho {
         padding: 0 2em;
 
     }
 
-    .opcoes{
+    .opcoes {
         margin-right: auto;
     }
 
-    .opcoes__item{
-        color:var(--preto);
+    .opcoes__item {
+        color: var(--preto);
         font-size: 16px;
     }
 
-    .container__texto{
+    .container__texto {
         display: block;
     }
 }

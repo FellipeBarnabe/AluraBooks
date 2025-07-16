@@ -20,7 +20,7 @@
     <header class="cabeçalho">
         <div class="container">
             <input type="checkbox" id="menu" class="container__botao">
-            <label for="menu">
+            <label for="menu" class="container__rotulo">
                 <span class="cabeçalho__menu-humburguer container__imagem"></span>
             </label>
             <ul class="lista-menu">
@@ -49,7 +49,7 @@
 
         <ul class="opcoes">
             <input type="checkbox" id="opcoes-menu" class="opcoes__botao">
-            <label for="opcoes-menu">
+            <label for="opcoes-menu" class="opcoes__rotulo">
                 <li class="opcoes__item">Categorias</li>
             </label>
 
@@ -142,59 +142,73 @@
             },
         });
     </script>
-    <section class="carrossel">
-        <h2 class="carrossel__titulo">Mais vendidos</h2>
-
+<section class="carrossel">
+    <h2 class="carrossel__titulo">Mais vendidos</h2>
+    <div class="carrossel__container">
         <div class="swiper">
-            <!-- Additional required wrapper -->
-            <!-- If we need pagination -->
+            <!-- Pagination -->
             <div class="swiper-pagination"></div>
 
+            <!-- Wrapper dos slides -->
             <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide"><img src="img/ApacheKafka.svg"
-                        alt="Livro sobre apache kafka e spring boot da alura books"></div>
-                <div class="swiper-slide"><img src="img/Liderança.svg"
-                        alt="Livro sobre liderança em design da alura books"></div>
-                <div class="swiper-slide"><img src="img/Javascript.svg"
-                        alt="Livro sobre javascript assertivo da alurabooks"></div>
-                <div class="swiper-slide"><img src="img/Guia Front-end.svg" alt="Livro Guia front end"></div>
-                <div class="swiper-slide"><img src="img/Portugol.svg" alt="Livro sobre portugol"></div>
-                <div class="swiper-slide"><img src="img/Acessibilidade.svg" alt="livro sobre acessibilidade"></div>
+                <div class="swiper-slide">
+                    <img src="img/ApacheKafka.svg" alt="Livro sobre apache kafka e spring boot da alura books">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/Liderança.svg" alt="Livro sobre liderança em design da alura books">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/Javascript.svg" alt="Livro sobre javascript assertivo da alurabooks">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/Guia Front-end.svg" alt="Livro Guia front end">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/Portugol.svg" alt="Livro sobre portugol">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/Acessibilidade.svg" alt="Livro sobre acessibilidade">
+                </div>
             </div>
 
-            <!-- If we need navigation buttons -->
+            <!-- Botões de navegação -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
+
         <div class="card">
-            <!-- 1º linha -->
+            <!-- 1ª linha -->
             <div class="card__descricao">
-                <!-- 1º coluna -->
+                <!-- 1ª coluna -->
                 <div class="descricao">
                     <img src="img/Estrelinhas.svg" alt="Avaliação 5 estrelas">
                     <h3 class="descricao__titulo">Autora do Mês</h3>
                     <h2 class="descricao__titulo-livro">Juliana Agarikov</h2>
-                    <p class="descricao__texto">Analista de sistemas e escritora, Juliana é especialista em Front-End.
+                    <p class="descricao__texto">
+                        Analista de sistemas e escritora, Juliana é especialista em Front-End.
                     </p>
                 </div>
-                <!-- 2º coluna -->
-                <img src="img/Perfil-escritora 1.svg" class="descrição__imagem">
+                <!-- 2ª coluna -->
+                <img src="img/Perfil-escritora 1.svg" class="descrição__imagem" alt="Foto da autora">
             </div>
 
-            <!-- 2º linha -->
+            <!-- 2ª linha -->
             <div class="card__botões">
-                <!-- 1º coluna -->
+                <!-- 1ª coluna -->
                 <ul class="botões">
-                    <li class="botões__item"><img src="img/Favoritos.svg" alt="Favoritar livro"></li>
-                    <li class="botões__item"><img src="img/Compras.svg" alt="Adicionar no carrinho de compras"></li>
+                    <li class="botões__item">
+                        <img src="img/Favoritos.svg" alt="Favoritar livro">
+                    </li>
+                    <li class="botões__item">
+                        <img src="img/Compras.svg" alt="Adicionar no carrinho de compras">
+                    </li>
                 </ul>
-                <!-- 2º coluna -->
+                <!-- 2ª coluna -->
                 <a href="#" class="botões__ancora">Saiba mais</a>
             </div>
         </div>
-        </div>
-    </section>
+    </div>
+</section>
 
     <section class="topicos">
         <h2 class="topicos__titulo">TÓPICOS VISITADOS RECENTEMENTE</h2>
